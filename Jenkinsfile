@@ -10,7 +10,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building the application...'
-				sh "mvnw spring-boot:run"
+				sh "mvn spring-boot:run"
             }
         }
 
