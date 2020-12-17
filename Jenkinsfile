@@ -15,11 +15,7 @@ pipeline {
                     def browsers = ['chrome', 'firefox']
                     for (int i = 0; i < browsers.size(); ++i) {
                         echo "Testing the ${browsers[i]} browser"
-                    }
-                }
-            }
-        }
-        stage("build") {
+stage("build") {
             steps {
                 echo 'building the application...'
 				sh "mvn -Dmaven.test.failure.ignore=true clean compile"
@@ -39,6 +35,11 @@ pipeline {
 				sh "mvn -Dmaven.test.failure.ignore=true install"
             }
         }
+                    }
+                }
+            }
+        }
+        
     }
 	post{
 		always{
