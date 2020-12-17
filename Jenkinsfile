@@ -1,6 +1,6 @@
 pipeline {
 
-    agent {label 'cicd'}
+    agent {label 'remote1'}
 
     tools {
         maven 'maven'
@@ -13,7 +13,6 @@ pipeline {
     stages {
         stage("build") {
             steps {
-
                 bat "mvn -Dmaven.test.failure.ignore=true clean compile"
             }
         }
