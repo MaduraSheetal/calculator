@@ -1,6 +1,6 @@
 pipeline {
 
-    {label 'cicd'}
+    agent {label 'cicd'}
 
     tools {
         maven 'maven'
