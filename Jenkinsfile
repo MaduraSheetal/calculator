@@ -1,6 +1,6 @@
 pipeline {
 
-    agent {label 'remote1'}
+    {label 'cicd'}
 
     tools {
         maven 'maven'
