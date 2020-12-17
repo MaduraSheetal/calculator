@@ -32,7 +32,7 @@ public class BaseClass {
       //  driver.get("http://localhost:8010/add");
         //driver.manage().window().maximize();
         //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    }
+   // }
 
     @AfterAll
     public  static void teardown(){
