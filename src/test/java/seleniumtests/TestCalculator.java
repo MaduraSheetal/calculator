@@ -74,7 +74,7 @@ public  class TestCalculator extends LocatingAllElements{
 
     @Test
     public void TestUrl(){
-        String Expected="http://localhost:8080/add" ;
+        String Expected="http://localhost:8010/add" ;
         String Actual= driver.getCurrentUrl();
         assertEquals(Expected,Actual);
     }
