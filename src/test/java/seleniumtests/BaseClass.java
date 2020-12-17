@@ -21,7 +21,7 @@ public class BaseClass {
         context=SpringApplication.run(CalculatorApplication.class);
         System.setProperty("webdriver.chrome.driver","C:\\WebDriver\\bin\\chromedriver.exe");
     driver= new ChromeDriver();
-        driver.get("http://localhost:8010/");
+        driver.get("http://localhost:8010/add");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         //driver=new FirefoxDriver();
