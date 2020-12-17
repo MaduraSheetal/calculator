@@ -10,7 +10,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building the application...'
-				sh "mvn spring-boot:run"
+				sh "mvn -Dmaven.test.failure.ignore=true clean compile"
             }
         }
 
