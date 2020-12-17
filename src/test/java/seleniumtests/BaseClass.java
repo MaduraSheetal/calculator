@@ -19,6 +19,7 @@ public class BaseClass {
     @BeforeAll
     public static void setUp(){
         context=SpringApplication.run(CalculatorApplication.class);
+        System.setProperty("webdriver.chrome.driver","C:\\WebDriver\\bin\\chromedriver");
     driver= new ChromeDriver();
         //driver=new FirefoxDriver();
 
