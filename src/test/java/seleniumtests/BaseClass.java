@@ -1,19 +1,24 @@
 package seleniumtests;
 
+import com.cicd.calculator.CalculatorApplication;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.boot.SpringApplication;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
     public static WebDriver driver;
+    protected static ConfigurableApplicationContext context;
 
     @BeforeAll
     public static void setUp(){
+        context=SpringApplication.run(CalculatorApplication.class);
     driver= new ChromeDriver();
         //driver=new FirefoxDriver();
 
