@@ -25,7 +25,7 @@ pipeline {
         stage("test") {
             steps {
                 echo 'testing the application...'
-                bat "mvn test"
+                bat "mvn -Dmaven.test.failure.ignore=true test"
             }
         }
 
