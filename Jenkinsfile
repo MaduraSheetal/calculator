@@ -32,7 +32,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploying the application...'
-                bat "mvn -Dmaven.test.failure.ignore=true test"
+                bat "mvn -Dmaven.test.failure.ignore=true package"
             }
         }
     }
